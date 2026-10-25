@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Natalia E. Valencia Donat, Assoc. AIA, LEED AP BD+C</title>
+<meta name="description" content="Architecture work and NYC Architecture Biennial leadership of Natalia E. Valencia Donat, Assoc. AIA, LEED AP BD+C, New York.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EEF0EC; --ink: #1C2321; --graphite: #5C6662;
+    --grid: rgba(28,35,33,.07); --line: #1C2321; --redline: #C42A1F; --panel: #FFFFFF;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #161B1A; --ink: #E6E9E5; --graphite: #98A39E;
+      --grid: rgba(230,233,229,.06); --line: #E6E9E5; --redline: #FF6B5C; --panel: #1F2523;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background-color: var(--paper); color: var(--ink);
+    background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 24px 24px;
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif; font-size: 17px; line-height: 1.55;
+    padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  a { color: inherit; text-underline-offset: 3px; }
+  a:hover { color: var(--redline); }
+  :focus-visible { outline: 2px solid var(--redline); outline-offset: 3px; }
+  .sheet { max-width: 1120px; margin: 0 auto; padding: 40px 32px 56px; }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: 5fr 6fr; gap: 40px; align-items: end; padding-bottom: 88px; }
+  .portrait { margin: 0; aspect-ratio: 4 / 5; overflow: hidden; background: var(--panel); position: relative; }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; display: block; }
+  .name { margin: 0; font-weight: 700; font-variation-settings: "wdth" 125; font-size: clamp(40px, 6vw, 80px); line-height: .96; letter-spacing: -.01em; }
+  .dim { position: relative; margin-top: 22px; height: 18px; border-left: 1px solid var(--redline); border-right: 1px solid var(--redline); color: var(--redline); }
+  .dim::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px solid var(--redline); }
+  .dim span { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: var(--paper); padding: 0 10px; font-size: 13px; font-variation-settings: "wdth" 85; white-space: nowrap; }
+  .lede { max-width: 30em; margin: 28px 0 0; font-size: 20px; line-height: 1.45; }
+  .doors { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 32px; border: 1.5px solid var(--line); }
+  .doors a { display: block; padding: 16px 18px; text-decoration: none; background: var(--panel); }
+  .doors a + a { border-left: 1.5px solid var(--line); }
+  .doors strong { display: block; font-size: 18px; font-variation-settings: "wdth" 110; }
+  .doors span { display: block; font-size: 14px; color: var(--graphite); }
+  .doors a:hover strong { color: var(--redline); }
+  @media (prefers-reduced-motion: no-preference) {
+    .dim { transform-origin: left; animation: draw 900ms 200ms cubic-bezier(.2,.7,.2,1) both; }
+    @keyframes draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  }
+
+  section { padding: 64px 0; border-top: 1px solid var(--line); }
+  .head { display: grid; grid-template-columns: 5fr 6fr; gap: 40px; margin-bottom: 36px; }
+  h2 { margin: 0; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.05; font-weight: 700; font-variation-settings: "wdth" 120; }
+  .head p { margin: 0; max-width: 34em; }
+  .sheetno { display: block; margin-top: 10px; font-size: 13px; color: var(--redline); }
+
+  /* Collages: each gallery gets an irregular grid */
+  .collage { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 56px; gap: 14px; }
+  .tile { margin: 0; position: relative; overflow: hidden; background: var(--panel); }
+  .tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .tile figcaption {
+    position: absolute; left: 0; bottom: 0; max-width: 100%;
+    background: var(--panel); color: var(--ink); padding: 6px 10px; font-size: 13px; line-height: 1.3;
+  }
+  .tile figcaption small { display: block; color: var(--graphite); font-size: 12px; }
+  .tile.missing { background: repeating-linear-gradient(45deg, transparent 0 9px, var(--grid) 9px 10px), var(--panel); border: 1px solid var(--line); }
+  .t1 { grid-column: 1 / 7;  grid-row: 1 / 8; }
+  .t2 { grid-column: 7 / 13; grid-row: 1 / 5; }
+  .t3 { grid-column: 7 / 10; grid-row: 5 / 8; }
+  .t4 { grid-column: 10 / 13; grid-row: 5 / 8; }
+  .t5 { grid-column: 1 / 5;  grid-row: 8 / 12; }
+  .t6 { grid-column: 5 / 9;  grid-row: 8 / 12; }
+  .t7 { grid-column: 9 / 13; grid-row: 8 / 12; }
+  .t8 { grid-column: 1 / 6; grid-row: 12 / 16; }
+  .t9 { grid-column: 6 / 9; grid-row: 12 / 16; }
+  .t10 { grid-column: 9 / 13; grid-row: 12 / 16; }
+  .collage.solo .t1 { grid-column: 3 / 11 !important; grid-row: 1 / 12; }
+  #biennial .t1 { grid-column: 7 / 13; } #biennial .t2 { grid-column: 1 / 7; }
+  #biennial .t3 { grid-column: 1 / 4; } #biennial .t4 { grid-column: 4 / 7; }
+
+  .request { display: grid; grid-template-columns: 5fr 6fr; gap: 40px; margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--grid); }
+  .request h3 { margin: 0 0 8px; font-size: 20px; }
+  .request p { margin: 0; max-width: 30em; }
+  .request form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .request label { display: grid; gap: 4px; font-size: 14px; color: var(--graphite); }
+  .request .wide { grid-column: 1 / -1; }
+  .request input, .request textarea { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 0; padding: 10px 12px; }
+  .request textarea { min-height: 72px; resize: vertical; }
+  .btn { justify-self: start; font: inherit; font-weight: 600; cursor: pointer; font-variation-settings: "wdth" 110; background: var(--ink); color: var(--paper); border: 1.5px solid var(--ink); padding: 12px 20px; text-decoration: none; display: inline-block; }
+  .btn:hover { background: var(--redline); border-color: var(--redline); color: #fff; }
+  .status { font-size: 14px; color: var(--graphite); min-height: 1.4em; }
+  .more { margin-top: 24px; }
+
+  .about { display: grid; grid-template-columns: 5fr 6fr; gap: 40px; }
+  .about p { margin: 0 0 1em; max-width: 34em; }
+  .record { list-style: none; margin: 0; padding: 0; }
+  .record li { display: grid; grid-template-columns: 120px 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--grid); }
+  .record .yrs { color: var(--graphite); font-variant-numeric: tabular-nums; }
+
+  .titleblock { max-width: 1056px; margin: 0 auto 40px; width: calc(100% - 64px); background: var(--panel); border: 1.5px solid var(--line); font-size: 13px; line-height: 1.35; display: grid; grid-template-columns: 2fr 1fr 1fr 2fr; }
+  .titleblock > div { padding: 8px 10px; border-top: 1px solid var(--line); }
+  .titleblock > div { border-top: 0; border-left: 1px solid var(--line); }
+  .titleblock > div:first-child { border-left: 0; }
+  .titleblock nav { align-items: center; height: 100%; }
+  .titleblock .cell + .cell { border-left: 1px solid var(--line); }
+  .titleblock small { display: block; color: var(--graphite); font-size: 11px; }
+  .titleblock nav { display: flex; gap: 12px; flex-wrap: wrap; }
+  .titleblock .who { font-weight: 700; font-variation-settings: "wdth" 115; font-size: 14px; }
+
+  @media (max-width: 860px) {
+    .sheet { padding: 28px 20px 48px; }
+    .hero, .head, .about, .request { grid-template-columns: 1fr; gap: 24px; }
+    .hero { padding-bottom: 56px; }
+    .request form { grid-template-columns: 1fr; }
+    .collage { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 48px; gap: 8px; }
+    .tile, #biennial .tile { grid-column: span 3 !important; grid-row: span 4 !important; }
+    .tile.t1, #biennial .tile.t1 { grid-column: 1 / 7 !important; grid-row: span 6 !important; }
+    .record li { grid-template-columns: 1fr; gap: 2px; }
+    .titleblock { width: auto; margin: 0 20px calc(20px + env(safe-area-inset-bottom, 0px)); grid-template-columns: 1fr 1fr; }
+    .titleblock > div:first-child, .titleblock > div:last-child { grid-column: 1 / -1; border-left: 0; }
+    .titleblock > div { border-top: 1px solid var(--line); }
+    .titleblock > div:first-child { border-top: 0; }
+    .titleblock > div:nth-child(2) { border-left: 0; }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header class="hero">
+    <figure class="portrait"><img src="images/natalia-microphone.jpg" alt="Natalia E. Valencia Donat speaking at the 2024 NYCAB Inclusion Award ceremony"></figure>
+    <div>
+      <h1 class="name">Natalia E. Valencia Donat</h1>
+      <div class="dim" aria-hidden="true"><span>Assoc. AIA, LEED AP BD+C, New York</span></div>
+      <p class="lede">Design lead and project manager in New York, and President of the NYC Architecture Biennial.</p>
+      <nav class="doors" aria-label="Main sections">
+        <a href="#architecture"><strong>Architecture</strong><span>Projects and full portfolio</span></a>
+        <a href="#biennial"><strong>NYC Architecture Biennial</strong><span>President, events and awards</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="architecture" aria-labelledby="arch-h">
+    <div class="head">
+      <div><h2 id="arch-h">Architecture</h2><span class="sheetno">Sheet A-100</span></div>
+      <p>Twenty-five years of commercial, cultural, hospitality and institutional work, from feasibility studies through construction administration, at Cesar Pelli &amp; Associates, Kevin Roche John Dinkeloo, KPF, Gensler, FXFOWLE, Perkins Eastman and Richard McElhiney Architects.</p>
+    </div>
+    <div class="collage" id="arch-collage"></div>
+
+    <div class="request" id="portfolio">
+      <div>
+        <h3>Full portfolio</h3>
+        <p>A PDF with drawings and photographs of each project. Leave your name and email to download it.</p>
+      </div>
+      <form id="request-form" novalidate>
+        <label>Name<input name="name" autocomplete="name" required></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <label class="wide">Company or school (optional)<input name="org" autocomplete="organization"></label>
+        <label class="wide">Message (optional)<textarea name="msg"></textarea></label>
+        <button class="btn" type="submit">Download full portfolio</button>
+        <div class="status wide" id="request-status" role="status"></div>
+      </form>
+    </div>
+  </section>
+
+  <section id="biennial" aria-labelledby="bi-h">
+    <div class="head">
+      <div><h2 id="bi-h">NYC Architecture Biennial</h2><span class="sheetno">Sheet B-100</span></div>
+      <p>As President of the NYC Architecture Biennial, a nonprofit, Natalia leads its programs and the NYCAB Inclusion Award, an international competition for architecture students, presented with partners including the New York Institute of Technology and UM ESAD.</p>
+    </div>
+    <div class="collage" id="bi-collage"></div>
+    <p class="more"><a class="btn" href="https://nycarchitecturebiennial.org" target="_blank" rel="noopener">Visit nycarchitecturebiennial.org</a></p>
+  </section>
+
+  <section id="about" aria-labelledby="about-h">
+    <div class="about">
+      <div><h2 id="about-h">About</h2></div>
+      <div>
+        <p>Natalia E. Valencia Donat, Assoc. AIA, LEED AP BD+C, leads multidisciplinary teams through all phases of design and construction, from proposals, fees and schedules to client coordination and consultant management.</p>
+        <ul class="record">
+          <li><span class="yrs">2023–now</span><span>Senior Designer and Project Manager, Richard McElhiney Architects, New York</span></li>
+          <li><span class="yrs">2018–2023</span><span>Architectural Designer III, Perkins Eastman, New York</span></li>
+          <li><span class="yrs">2017–2018</span><span>Senior Designer, FXFOWLE, New York</span></li>
+          <li><span class="yrs">2015–2017</span><span>Job Captain, Gensler, New York</span></li>
+          <li><span class="yrs">2011–2014</span><span>Associate Principal, KPF, New York</span></li>
+          <li><span class="yrs">2002–2011</span><span>Designer, Kevin Roche John Dinkeloo and Associates, Connecticut</span></li>
+          <li><span class="yrs">2001–2002</span><span>Designer, Cesar Pelli &amp; Associates, Connecticut</span></li>
+          <li><span class="yrs">2020–now</span><span>President, <a href="https://nycarchitecturebiennial.org">NYC Architecture Biennial</a></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="about">
+      <div><h2 id="contact-h">Contact</h2></div>
+      <div>
+        <p><a id="email-link" href="#"></a></p>
+        <p id="li-row" hidden><a id="li-link" href="#" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<aside class="titleblock" aria-label="Site information">
+  <div class="full who">Natalia E. Valencia Donat<small>nv-projects.com</small></div>
+  <div class="cell"><small>Location</small>New York</div>
+  <div class="cell"><small>Sheets</small>A-100, B-100</div>
+  <div class="full"><nav aria-label="Sections"><a href="#architecture">Architecture</a><a href="#biennial">NYCAB</a><a href="#about">About</a><a href="#contact">Contact</a><a id="li-nav" href="#" target="_blank" rel="noopener" hidden>LinkedIn</a></nav></div>
+</aside>
+
+<script>
+  // ---- Edit these to update the site ----
+  const CONTACT_EMAIL = "n.valencia@nycarchitecturebiennial.com";
+  // Paste your LinkedIn profile address here, e.g. "https://www.linkedin.com/in/your-name/".
+  const LINKEDIN_URL = "";
+  const PORTFOLIO_URL = "https://workdrive.zohoexternal.com/external/64041783ed0bb199df615522caec706e1530e95ab7185dff8e9f58b68a3c6f7a";
+
+  // Architecture projects (image files go in the images folder).
+  const PROJECTS = [
+    { image: "images/dublin-convention-centre.jpg", title: "Dublin Convention Centre", meta: "Kevin Roche John Dinkeloo, Dublin, Ireland" },
+    { image: "images/resorts-casino.jpg", title: "Resorts Casino", meta: "Perkins Eastman, New York" },
+    { image: "images/3-hudson-boulevard.jpg", title: "3 Hudson Boulevard", meta: "FXFOWLE, New York" },
+    { image: "images/mnp-tower.jpg", title: "MNP Tower", meta: "KPF, Vancouver, Canada" },
+    { image: "images/harborside.jpg", title: "Harborside Office Building", meta: "Gensler, Jersey City, NJ" },
+    { image: "images/canary-wharf-hq2.jpg", title: "HQ-2 Canary Wharf", meta: "Cesar Pelli & Associates, London" },
+    { image: "images/arsht-center.jpg", title: "Adrienne Arsht Center", meta: "Cesar Pelli & Associates, Miami, FL" },
+    { image: "images/yale-ingalls-rink.jpg", title: "Yale David S. Ingalls Hockey Rink", meta: "Kevin Roche John Dinkeloo, New Haven, CT" },
+    { image: "images/met-costume-institute.jpg", title: "Metropolitan Museum of Art", meta: "Kevin Roche John Dinkeloo, New York" },
+    { image: "images/cornell-statler-hotel.jpg", title: "Statler Hotel, Cornell University", meta: "Richard McElhiney Architects, Ithaca, NY" },
+  ];
+
+  // NYC Architecture Biennial photos (2024 awards and events).
+  const BIENNIAL = [
+    { image: "images/nycab-2024-1.jpg", title: "2024 NYCAB Inclusion Award ceremony", meta: "New York Institute of Technology" },
+    // Add more NYCAB photos here, e.g. { image: "images/nycab-2024-2.jpg", title: "Caption", meta: "Place" },
+  ];
+  // ---------------------------------------
+
+  function build(id, items) {
+    const box = document.getElementById(id);
+    if (items.length === 1) box.classList.add("solo");
+    items.forEach((p, i) => {
+      const fig = document.createElement("figure");
+      fig.className = "tile t" + (i + 1);
+      const img = document.createElement("img");
+      img.src = p.image; img.alt = p.title; img.loading = "lazy";
+      img.addEventListener("error", () => { fig.classList.add("missing"); img.remove(); });
+      const cap = document.createElement("figcaption");
+      cap.textContent = p.title;
+      if (p.meta) { const s = document.createElement("small"); s.textContent = p.meta; cap.appendChild(s); }
+      fig.append(img, cap);
+      box.appendChild(fig);
+    });
+  }
+  build("arch-collage", PROJECTS);
+  build("bi-collage", BIENNIAL);
+
+  const link = document.getElementById("email-link");
+  link.href = "mailto:" + CONTACT_EMAIL; link.textContent = CONTACT_EMAIL;
+  if (LINKEDIN_URL) {
+    for (const id of ["li-link", "li-nav"]) document.getElementById(id).href = LINKEDIN_URL;
+    document.getElementById("li-row").hidden = false;
+    document.getElementById("li-nav").hidden = false;
+  }
+
+  const form = document.getElementById("request-form");
+  const status = document.getElementById("request-status");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const f = new FormData(form);
+    const name = (f.get("name") || "").trim(), email = (f.get("email") || "").trim();
+    if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { status.textContent = "Enter your name and a valid email address."; return; }
+    const org = (f.get("org") || "").trim(), msg = (f.get("msg") || "").trim();
+    const body = `I downloaded your full portfolio.\n\nName: ${name}\nEmail: ${email}` + (org ? `\nCompany or school: ${org}` : "") + (msg ? `\n\n${msg}` : "");
+    status.innerHTML = "";
+    const a = document.createElement("a"); a.href = PORTFOLIO_URL; a.target = "_blank"; a.rel = "noopener"; a.textContent = "Open the full portfolio";
+    status.append("Thank you, " + name + ". ", a, ".");
+    window.open(PORTFOLIO_URL, "_blank", "noopener");
+    setTimeout(() => { window.location.href = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent("Portfolio download: " + name) + "&body=" + encodeURIComponent(body); }, 400);
+  });
+</script>
+</body>
+</html>
