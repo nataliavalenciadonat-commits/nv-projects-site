@@ -14,18 +14,10 @@
     --grid: rgba(255,255,255,.10); --line: #F4F4F1; --redline: #FF8C42; --panel: #161616;
     color-scheme: dark;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --paper: #161B1A; --ink: #E6E9E5; --graphite: #98A39E;
-      --grid: rgba(230,233,229,.06); --line: #E6E9E5; --redline: #FF8C42; --panel: #1F2523;
-      color-scheme: dark;
-    }
-  }
   * { box-sizing: border-box; }
   body {
     margin: 0; background-color: var(--paper); color: var(--ink);
     background-image: none;
-    background-size: auto;
     font-family: "Archivo", "Helvetica Neue", Arial, sans-serif; font-size: 17px; line-height: 1.55;
     padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
   }
@@ -38,7 +30,7 @@
   .hero { display: grid; grid-template-columns: 5fr 6fr; gap: 40px; align-items: end; padding-bottom: 88px; }
   .portrait { margin: 0; aspect-ratio: 4 / 5; overflow: hidden; background: var(--panel); position: relative; }
   .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; display: block; }
-  .name { margin: 0; font-weight: 700; font-variation-settings: "wdth" 100; font-size: clamp(40px, 6vw, 80px); line-height: .96; letter-spacing: -.01em; }
+  .name { margin: 0; font-weight: 700; font-variation-settings: "wdth" 100; font-size: clamp(40px, 6vw, 80px); line-height: .96; letter-spacing: -.02em; }
   .dim { position: relative; margin-top: 22px; height: 18px; border-left: 1px solid var(--redline); border-right: 1px solid var(--redline); color: var(--redline); }
   .dim::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px solid var(--redline); }
   .dim span { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: var(--paper); padding: 0 10px; font-size: 13px; font-variation-settings: "wdth" 85; white-space: nowrap; }
@@ -88,9 +80,9 @@
   .collage.five .t3 { grid-column: 9 / 13 !important; grid-row: 1 / 9 !important; }
   .collage.five .t4 { grid-column: 1 / 5 !important; grid-row: 9 / 17 !important; }
   .collage.five .t5 { grid-column: 5 / 9 !important; grid-row: 9 / 17 !important; }
-  .collage.five .t1 { grid-column: 9 / 13 !important; grid-row: 9 / 17 !important; }
-  .collage.five .t6 { grid-column: 1 / 13 !important; grid-row: 17 / 26 !important; }
-  .collage.five .t6 img { object-position: 50% 35%; }
+  .collage.five .t7 { grid-column: 9 / 13 !important; grid-row: 9 / 17 !important; }
+  .collage.five .t1 { grid-column: 1 / 5 !important; grid-row: 17 / 26 !important; }
+  .collage.five .t6 { grid-column: 5 / 13 !important; grid-row: 17 / 26 !important; }
   .collage.five .t1 img { object-position: 45% 30%; }
   .collage.solo .t1 { grid-column: 3 / 11 !important; grid-row: 1 / 12; }
   #biennial .t1 { grid-column: 7 / 13; } #biennial .t2 { grid-column: 1 / 7; }
@@ -254,8 +246,9 @@
     { image: "images/nycab-2024-3.jpg", title: "2024 NYC Architecture Biennial", meta: "New York Institute of Technology, Manhattan, October 17, 2024" },
     { image: "images/nycab-2024-4.jpg", title: "2024 NYC Architecture Biennial, with speaker Farzana Gandhi", meta: "New York Institute of Technology, Manhattan, October 19, 2024" },
     { image: "images/nycab-2024-5.jpg", title: "2024 NYC Architecture Biennial", meta: "New York Institute of Technology, Manhattan, October 19, 2024" },
-    { image: "images/nycab-2024-6.jpg", title: "2024 NYC Architecture Biennial", meta: "Reception" },
-    // Add more NYCAB photos here, e.g. { image: "images/nycab-2024-7.jpg", title: "Caption", meta: "Place" },
+    { image: "images/nycab-7.jpg", title: "NYC Architecture Biennial", meta: "" },
+    { image: "images/nycab-8.jpg", title: "NYC Architecture Biennial", meta: "" },
+    // Add more NYCAB photos here, e.g. { image: "images/nycab-9.jpg", title: "Caption", meta: "Place" },
   ];
   // ---------------------------------------
 
@@ -263,7 +256,7 @@
     const box = document.getElementById(id);
     if (items.length === 1) box.classList.add("solo");
     if (items.length === 3) box.classList.add("trio");
-    if (items.length >= 5 && items.length <= 6) box.classList.add("five");
+    if (items.length >= 5 && items.length <= 8) box.classList.add("five");
     items.forEach((p, i) => {
       const fig = document.createElement("figure");
       fig.className = "tile t" + (i + 1);
