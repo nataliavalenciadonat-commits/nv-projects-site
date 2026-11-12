@@ -11,13 +11,13 @@
 <style>
   :root {
     --paper: #0B0B0B; --ink: #F4F4F1; --graphite: #A3A39E;
-    --grid: rgba(255,255,255,.10); --line: #F4F4F1; --redline: #FF5A4A; --panel: #161616;
+    --grid: rgba(255,255,255,.10); --line: #F4F4F1; --redline: #FF8C42; --panel: #161616;
     color-scheme: dark;
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --paper: #161B1A; --ink: #E6E9E5; --graphite: #98A39E;
-      --grid: rgba(230,233,229,.06); --line: #E6E9E5; --redline: #FF6B5C; --panel: #1F2523;
+      --grid: rgba(230,233,229,.06); --line: #E6E9E5; --redline: #FF8C42; --panel: #1F2523;
       color-scheme: dark;
     }
   }
@@ -58,7 +58,7 @@
   .head { display: grid; grid-template-columns: 5fr 6fr; gap: 40px; margin-bottom: 36px; }
   h2 { margin: 0; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.05; font-weight: 700; font-variation-settings: "wdth" 100; }
   .head p { margin: 0; max-width: 34em; }
-  .sheetno { display: block; margin-top: 10px; font-size: 13px; color: var(--redline); }
+  .sheetno { display: none; margin-top: 10px; font-size: 13px; color: var(--redline); }
 
   /* Collages: each gallery gets an irregular grid */
   .collage { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 56px; gap: 14px; }
@@ -222,7 +222,7 @@
 <aside class="titleblock" aria-label="Site information">
   <div class="full who">Natalia E. Valencia Donat<small>nv-projects.com</small></div>
   <div class="cell"><small>Location</small>New York</div>
-  <div class="cell"><small>Sheets</small>A-100, B-100</div>
+  <div class="cell"><small>Credentials</small>Assoc. AIA, LEED AP BD+C</div>
   <div class="full"><nav aria-label="Sections"><a href="#architecture">Architecture</a><a href="#biennial">NYCAB</a><a href="#about">About</a><a href="#contact">Contact</a><a id="li-nav" href="#" target="_blank" rel="noopener" hidden>LinkedIn</a></nav></div>
 </aside>
 
