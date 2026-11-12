@@ -10,9 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #EEF0EC; --ink: #1C2321; --graphite: #5C6662;
-    --grid: rgba(28,35,33,.07); --line: #1C2321; --redline: #C42A1F; --panel: #FFFFFF;
-    color-scheme: light;
+    --paper: #0B0B0B; --ink: #F4F4F1; --graphite: #A3A39E;
+    --grid: rgba(255,255,255,.10); --line: #F4F4F1; --redline: #FF5A4A; --panel: #161616;
+    color-scheme: dark;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -263,7 +263,7 @@
     const box = document.getElementById(id);
     if (items.length === 1) box.classList.add("solo");
     if (items.length === 3) box.classList.add("trio");
-    if (items.length >= 5) box.classList.add("five");
+    if (items.length >= 5 && items.length <= 6) box.classList.add("five");
     items.forEach((p, i) => {
       const fig = document.createElement("figure");
       fig.className = "tile t" + (i + 1);
