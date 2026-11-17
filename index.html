@@ -142,6 +142,7 @@
   #arch-collage .tile img, #bi-collage .tile img { flex: none; height: 430px; object-fit: cover; object-position: 50% 50% !important; }
   #bi-collage .tile img { object-position: 50% 30% !important; }
   #arch-collage .tile.same-project figcaption { visibility: hidden; } /* project name shown once per row */
+  @media (min-width: 861px) { #arch-collage .tile figcaption { white-space: nowrap; } } /* name on one line; it may run under the next photo of the same project */
   @media (max-width: 860px) {
     #arch-collage, #bi-collage { grid-template-columns: repeat(6, 1fr); gap: 20px 8px; }
     #arch-collage .tile[style], #bi-collage .tile[style] { grid-column: span var(--mc, 6) !important; grid-row: auto !important; }
