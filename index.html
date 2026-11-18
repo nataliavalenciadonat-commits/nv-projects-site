@@ -3,6 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2V2H9WQ59E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2V2H9WQ59E');
+</script>
 <title>Natalia E. Valencia Donat, Assoc. AIA, LEED AP BD+C</title>
 <meta name="description" content="Architecture work and NYC Architecture Biennial leadership of Natalia E. Valencia Donat, Assoc. AIA, LEED AP BD+C, New York.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -383,6 +392,7 @@
     if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { status.textContent = "Enter your name and a valid email address."; return; }
     const org = (f.get("org") || "").trim(), msg = (f.get("msg") || "").trim();
     const body = `I downloaded your full portfolio.\n\nName: ${name}\nEmail: ${email}` + (org ? `\nCompany or school: ${org}` : "") + (msg ? `\n\n${msg}` : "");
+    if (typeof gtag === "function") gtag("event", "portfolio_request");
     status.innerHTML = "";
     const a = document.createElement("a"); a.href = PORTFOLIO_URL; a.target = "_blank"; a.rel = "noopener"; a.textContent = "Open the full portfolio";
     status.append("Thank you, " + name + ". ", a, ".");
