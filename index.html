@@ -54,7 +54,6 @@
     .dim { transform-origin: left; animation: draw 900ms 200ms cubic-bezier(.2,.7,.2,1) both; }
     @keyframes draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
   }
-
   section { padding: 64px 0; border-top: 1px solid var(--line); }
   .head { display: grid; grid-template-columns: 5fr 6fr; gap: 40px; margin-bottom: 36px; }
   h2 { margin: 0; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.05; font-weight: 700; font-variation-settings: "wdth" 100; }
@@ -143,7 +142,6 @@
     .titleblock > div:first-child { border-top: 0; }
     .titleblock > div:nth-child(2) { border-left: 0; }
   }
-
   /* Photo rows (Architecture and NYCAB): every photo has the same height, captions sit underneath
      and never change the photo size. Widths per row are set by the script (see layoutRows). */
   #arch-collage, #bi-collage { grid-template-columns: repeat(12, 1fr); grid-auto-rows: auto; gap: 28px 14px; align-items: start; }
@@ -196,7 +194,6 @@
       </form>
     </div>
   </section>
-
   <section id="biennial" aria-labelledby="bi-h">
     <div class="head">
       <div><h2 id="bi-h">NYC Architecture Biennial</h2><span class="sheetno">Sheet B-100</span></div>
@@ -205,12 +202,10 @@
     <div class="collage" id="bi-collage"></div>
     <p class="more"><a class="btn" style="background: var(--redline); border-color: var(--redline); color: #0B0B0B;" href="https://nycarchitecturebiennial.org" target="_blank" rel="noopener">Visit nycarchitecturebiennial.org</a> <a class="btn" href="https://www.instagram.com/nycarchitecturebiennial/" target="_blank" rel="noopener">NYCAB on Instagram</a></p>
   </section>
-
   <section id="about" aria-labelledby="about-h">
     <h2 id="about-h" style="margin-bottom: 28px;">About</h2><div class="about">
       <div><h3 class="role-h" style="margin-top: 0;">President, NYC Architecture Biennial</h3><p class="role-p">I oversee all organizational, creative, and operational aspects of the Biennial, establishing annual themes, developing partnerships, securing sponsorships, managing budgets, and directing multidisciplinary teams of volunteers, consultants, and collaborators. Working closely with architects, universities, professional organizations, technology companies, and public institutions, I cultivate strategic relationships that expand the organization's impact and international reach.</p><p class="role-p">My responsibilities include developing conference programming, curating keynote speakers and panel discussions, coordinating continuing education initiatives, supervising branding and marketing strategies, directing website development and digital communications, and managing event logistics from concept through execution. I also lead fundraising efforts, oversee the organization's governance, and guide long-term planning to support NYCAB's educational mission and financial sustainability.</p><p class="role-p">Under my leadership, the Biennial has expanded its international presence by promoting cross-cultural dialogue and interdisciplinary collaboration at the intersection of architecture, technology, sustainability, and society. Signature initiatives include the annual international conference, the iN Awards recognizing innovation in architecture and design, online educational programs in collaboration with Pertanto, and partnerships that connect professionals across the Americas and beyond.</p><p class="role-p">This role combines executive leadership, strategic planning, business development, event production, communications, stakeholder engagement, and architectural advocacy, reflecting my commitment to advancing design excellence while creating opportunities for education, professional exchange, and innovation within the global architectural community.</p></div>
       <div>
-
         <h3 class="role-h" style="margin-top: 0;">Architecture</h3><p class="role-p">Experience on core and shell commercial buildings and interior design:</p><ul class="duties"><li>Lead multidisciplinary project teams through all phases of design and construction.</li><li>Develop project proposals, fee estimates, and work plans.</li><li>Prepare and manage project schedules, budgets, and deliverables.</li><li>Manage client relationships, presentations, and strategic decision-making.</li><li>Identify client objectives and translate requirements into project solutions.</li><li>Foster long-term client partnerships and support business development efforts.</li><li>Direct coordination among architectural, engineering, and specialty consultants.</li><li>Evaluate consultant proposals and participate in consultant selection.</li><li>Develop project design concepts and implementation strategies.</li><li>Conduct feasibility studies, programming, and site assessments.</li><li>Perform zoning, building code, and regulatory compliance reviews.</li><li>Prepare design presentations and client communication materials.</li><li>Lead construction materials, finishes, furniture, and FF&amp;E selection.</li><li>Prepare material palettes and finish presentation boards.</li><li>Oversee the production and coordination of design and construction documents.</li><li>Prepare permit and Department of Buildings (DOB) submissions.</li><li>Manage bidding and procurement activities, including responses to bidder inquiries.</li><li>Review submittals, RFIs, shop drawings, and technical documentation.</li><li>Provide construction administration and field observation services.</li><li>Coordinate with contractors and stakeholders to maintain project quality, schedule, and design intent.</li></ul><ul class="record">
           <li><span class="yrs">2023–Current</span><span>Senior Designer and Project Manager, Richard McElhiney Architects, New York</span></li> <li><span class="yrs">2022–Current</span><span>Judge, iN Award Architects and Students Competition</span></li> <li><span class="yrs">2020–Current</span><span>President, <a href="https://nycarchitecturebiennial.org">NYC Architecture Biennial</a></span></li>
           <li><span class="yrs">2018–2023</span><span>Architectural Designer III, Perkins Eastman, New York</span></li>
@@ -224,7 +219,6 @@
       </div>
     </div>
   </section>
-
   <section id="contact" aria-labelledby="contact-h">
     <div class="about">
       <div><h2 id="contact-h">Contact</h2></div>
@@ -257,45 +251,67 @@
   // Optional "span" (out of 12) sets a photo's width in its row, e.g. span: 8 = wide, span: 4 = narrow.
   const PROJECTS = [
     { year: 2001, image: "images/hq2-canary-wharf-01.jpg", title: "HQ2 Canary Wharf", meta: "Cesar Pelli & Associates, London" },
-    { year: 2002, image: "images/adrienne-arsht-center-03.jpg", title: "Adrienne Arsht Center", meta: "Cesar Pelli & Associates, Miami, FL" },
-    { year: 2004, image: "images/unicef-building-02.jpg", title: "UNICEF Building", meta: "KRJDA, New York" },
-    { year: 2004, image: "images/view-2.jpg", title: "UNICEF Building", meta: "KRJDA, New York" },
-    { year: 2006, image: "images/bouygues-head-office-02.jpg", title: "Head Office for Bouygues SA", meta: "KRJDA, Paris, France" },
-    { year: 2006, image: "images/bouygues-head-office-04.jpg", title: "Head Office for Bouygues SA", meta: "KRJDA, Paris, France" },
-    { year: 2007, image: "images/met-19th-century-galleries-a.jpg", title: "The Met, 19th Century Galleries", meta: "KRJDA, New York" },
-    { year: 2007, image: "images/met-19th-century-galleries-b.jpg", title: "The Met, 19th Century Galleries", meta: "KRJDA, New York" },
-    { year: 2007, image: "images/met-19th-century-galleries-c.jpg", title: "The Met, 19th Century Galleries", meta: "KRJDA, New York" },
-    { year: 2007, image: "images/met-uris-center-a.jpg", title: "The Met, Uris Center", meta: "KRJDA, New York" },
-    { year: 2007, image: "images/met-uris-center-b.jpg", title: "The Met, Uris Center", meta: "KRJDA, New York" },
-    { year: 2009, image: "images/met-american-wing-a.jpg", title: "The Met, American Wing", meta: "KRJDA, New York" },
-    { year: 2009, image: "images/met-american-wing-b.jpg", title: "The Met, American Wing", meta: "KRJDA, New York" },
+    { year: 2001, image: "images/hq2-canary-wharf-02.jpg", title: "HQ2 Canary Wharf", meta: "Cesar Pelli & Associates, London" },
+    { year: 2002, span: 9, image: "images/adrienne-arsht-center-01.jpg", title: "Adrienne Arsht Center", meta: "Cesar Pelli & Associates, Miami, FL" },
+    { year: 2002, span: 3, image: "images/adrienne-arsht-center-03.jpg", title: "Adrienne Arsht Center", meta: "Cesar Pelli & Associates, Miami, FL" },
+    { year: 2003, span: 7, image: "images/nyu-kimmel-exterior.jpg", title: "NYU Kimmel Student Center", meta: "KRJDA, New York" },
+    { year: 2003, span: 5, image: "images/nyu-kimmel-02.jpg", title: "NYU Kimmel Student Center", meta: "KRJDA, New York" },
+    { year: 2003, image: "images/nyu-kimmel-03.jpg", title: "NYU Kimmel Student Center", meta: "KRJDA, New York" },
+    { year: 2003, image: "images/nyu-kimmel-04.jpg", title: "NYU Kimmel Student Center", meta: "KRJDA, New York" },
+    { year: 2003, span: 8, image: "images/museum-of-jewish-heritage-01.jpg", title: "Museum of Jewish Heritage, Morgenthau Wing", meta: "KRJDA, New York" },
+    { year: 2003, span: 4, image: "images/museum-of-jewish-heritage-03.jpg", title: "Museum of Jewish Heritage, Morgenthau Wing", meta: "KRJDA, New York" },
+    { year: 2003, span: 6, image: "images/museum-of-jewish-heritage-04.jpg", title: "Museum of Jewish Heritage, Morgenthau Wing", meta: "KRJDA, New York" },
+    { year: 2003, span: 6, image: "images/museum-of-jewish-heritage-02.jpg", title: "Museum of Jewish Heritage, Morgenthau Wing", meta: "KRJDA, New York" },
+    { year: 2004, span: 7, image: "images/unicef-building-02.jpg", title: "UNICEF Building", meta: "KRJDA, New York" },
+    { year: 2004, span: 5, focus: "50% 85%", image: "images/view-2.jpg", title: "UNICEF Building", meta: "KRJDA, New York" },
+    { year: 2006, span: 4, image: "images/bouygues-head-office-02.jpg", title: "Head Office for Bouygues SA", meta: "KRJDA, Paris, France" },
+    { year: 2006, span: 8, image: "images/bouygues-head-office-04.jpg", title: "Head Office for Bouygues SA", meta: "KRJDA, Paris, France" },
+    { year: 2007, span: 4, image: "images/met-19th-century-galleries-c.jpg", title: "The Met, 19th Century Galleries", meta: "KRJDA, New York" },
+    { year: 2007, span: 4, image: "images/met-uris-center-a.jpg", title: "The Met, Uris Center", meta: "KRJDA, New York" },
+    { year: 2007, span: 4, image: "images/met-uris-center-c.jpg", title: "The Met, Uris Center", meta: "KRJDA, New York" },
+    { year: 2009, span: 7, image: "images/met-american-wing-a.jpg", title: "The Met, American Wing", meta: "KRJDA, New York" },
+    { year: 2009, span: 5, focus: "25% 50%", image: "images/met-american-wing-b.jpg", title: "The Met, American Wing", meta: "KRJDA, New York" },
     { year: 2009, image: "images/met-islamic-galleries-a.jpg", title: "The Met, Islamic Galleries", meta: "KRJDA, New York" },
     { year: 2009, image: "images/met-islamic-galleries-b.jpg", title: "The Met, Islamic Galleries", meta: "KRJDA, New York" },
-    { year: 2009, image: "images/1101-new-york-ave.jpg", title: "1101 New York Avenue", meta: "KRJDA, Washington, DC" },
-    { year: 2009, image: "images/1101-new-york-avenue-03.jpg", title: "1101 New York Avenue", meta: "KRJDA, Washington, DC" },
-    { year: 2009, image: "images/1101-new-york-avenue-04.jpg", title: "1101 New York Avenue", meta: "KRJDA, Washington, DC" },
-    { year: 2009, image: "images/ingalls-rink-02.jpg", title: "Yale David S. Ingalls Hockey Rink", meta: "KRJDA, New Haven, CT" },
-    { year: 2009, image: "images/ingalls-rink-03.jpg", title: "Yale David S. Ingalls Hockey Rink", meta: "KRJDA, New Haven, CT" },
+    { year: 2009, span: 8, image: "images/amnh-roosevelt-memorial-00.jpg", title: "American Museum of Natural History, Roosevelt Memorial", meta: "KRJDA, New York" },
+    { year: 2009, span: 4, image: "images/amnh-roosevelt-memorial-01.jpg", title: "American Museum of Natural History, Roosevelt Memorial", meta: "KRJDA, New York" },
+    { year: 2009, span: 6, image: "images/amnh-roosevelt-memorial-02.jpg", title: "American Museum of Natural History, Roosevelt Memorial", meta: "KRJDA, New York" },
+    { year: 2009, span: 6, image: "images/amnh-roosevelt-memorial-03.jpg", title: "American Museum of Natural History, Roosevelt Memorial", meta: "KRJDA, New York" },
+    { year: 2009, span: 7, image: "images/1101-new-york-ave.jpg", title: "1101 New York Avenue", meta: "KRJDA, Washington, DC" },
+    { year: 2009, span: 5, image: "images/1101-new-york-avenue-03.jpg", title: "1101 New York Avenue", meta: "KRJDA, Washington, DC" },
+    { year: 2009, span: 6, image: "images/1101-new-york-avenue-05.jpg", title: "1101 New York Avenue", meta: "KRJDA, Washington, DC" },
+    { year: 2009, span: 6, focus: "78% 50%", image: "images/1101-new-york-avenue-04.jpg", title: "1101 New York Avenue", meta: "KRJDA, Washington, DC" },
+    { year: 2009, span: 6, image: "images/ingalls-rink-02.jpg", title: "Yale David S. Ingalls Hockey Rink", meta: "KRJDA, New Haven, CT" },
+    { year: 2009, span: 6, image: "images/ingalls-rink-b.jpg", title: "Yale David S. Ingalls Hockey Rink", meta: "KRJDA, New Haven, CT" },
+    { year: 2009, span: 7, image: "images/ingalls-rink-03.jpg", title: "Yale David S. Ingalls Hockey Rink", meta: "KRJDA, New Haven, CT" },
+    { year: 2009, span: 5, image: "images/ingalls-rink-c.jpg", title: "Yale David S. Ingalls Hockey Rink", meta: "KRJDA, New Haven, CT" },
     { year: 2009, image: "images/lafayette-tower.jpg", title: "Lafayette Tower", meta: "KRJDA, Washington, DC" },
-    { year: 2009, image: "images/lafayette-tower-03.jpg", title: "Lafayette Tower", meta: "KRJDA, Washington, DC" },
     { year: 2009, image: "images/lafayette-tower-04.jpg", title: "Lafayette Tower", meta: "KRJDA, Washington, DC" },
-    { year: 2010, image: "images/dublin-convention-centre.jpg", title: "Dublin Convention Centre", meta: "KRJDA, Dublin, Ireland" },
-    { year: 2010, image: "images/convention-centre-dublin-02.jpg", title: "Dublin Convention Centre", meta: "KRJDA, Dublin, Ireland" },
-    { year: 2010, image: "images/convention-centre-dublin-04.jpg", title: "Dublin Convention Centre", meta: "KRJDA, Dublin, Ireland" },
-    { year: 2011, image: "images/capitol-crossing.jpg", title: "Capitol Crossing, 200/250 Massachusetts Ave", meta: "KRJDA, Washington, DC" },
-    { year: 2011, image: "images/capitol-crossing-01.jpg", title: "Capitol Crossing, 200/250 Massachusetts Ave", meta: "KRJDA, Washington, DC" },
-    { year: 2011, image: "images/capitol-crossing-02.jpg", title: "Capitol Crossing, 200/250 Massachusetts Ave", meta: "KRJDA, Washington, DC" },
-    { year: 2011, image: "images/capitol-crossing-04.jpg", title: "Capitol Crossing, 200/250 Massachusetts Ave", meta: "KRJDA, Washington, DC" },
-    { year: 2012, image: "images/thamrin-nine-01.jpg", title: "Autograph Tower at Thamrin Nine", meta: "KPF, Jakarta, Indonesia" },
-    { year: 2012, image: "images/thamrin-nine-03.jpg", title: "Autograph Tower at Thamrin Nine", meta: "KPF, Jakarta, Indonesia" },
+    { year: 2010, span: 7, image: "images/oakland-museum-01.jpg", title: "Oakland Museum of California", meta: "KRJDA, Oakland, CA" },
+    { year: 2010, span: 5, focus: "85% 50%", image: "images/oakland-museum-02.jpg", title: "Oakland Museum of California", meta: "KRJDA, Oakland, CA" },
+    { year: 2010, span: 6, image: "images/dublin-convention-centre.jpg", title: "Dublin Convention Centre", meta: "KRJDA, Dublin, Ireland" },
+    { year: 2010, span: 6, image: "images/convention-centre-dublin-02.jpg", title: "Dublin Convention Centre", meta: "KRJDA, Dublin, Ireland" },
+    { year: 2010, span: 5, image: "images/convention-centre-dublin-01.jpg", title: "Dublin Convention Centre", meta: "KRJDA, Dublin, Ireland" },
+    { year: 2010, span: 7, image: "images/convention-centre-dublin-04.jpg", title: "Dublin Convention Centre", meta: "KRJDA, Dublin, Ireland" },
+    { year: 2011, span: 7, image: "images/capitol-crossing-01.jpg", title: "Capitol Crossing, 200/250 Massachusetts Ave", meta: "KRJDA, Washington, DC" },
+    { year: 2011, span: 5, focus: "20% 50%", image: "images/capitol-crossing-04.jpg", title: "Capitol Crossing, 200/250 Massachusetts Ave", meta: "KRJDA, Washington, DC" },
+    { year: 2011, span: 7, image: "images/capitol-crossing.jpg", title: "Capitol Crossing, 200/250 Massachusetts Ave", meta: "KRJDA, Washington, DC" },
+    { year: 2011, span: 5, focus: "80% 50%", image: "images/capitol-crossing-02.jpg", title: "Capitol Crossing, 200/250 Massachusetts Ave", meta: "KRJDA, Washington, DC" },
+    { year: 2012, span: 3, image: "images/thamrin-nine-01.jpg", title: "Autograph Tower at Thamrin Nine", meta: "KPF, Jakarta, Indonesia" },
+    { year: 2012, span: 9, image: "images/thamrin-nine-03.jpg", title: "Autograph Tower at Thamrin Nine", meta: "KPF, Jakarta, Indonesia" },
     { year: 2013, image: "images/genesis-beijing-01.jpg", title: "Genesis Beijing, Bulgari Hotel", meta: "KPF, Beijing, China" },
     { year: 2013, image: "images/genesis-beijing-03.jpg", title: "Genesis Beijing, Bulgari Hotel", meta: "KPF, Beijing, China" },
+    { year: 2013, image: "images/genesis-beijing-a.jpg", title: "Genesis Beijing, Bulgari Hotel", meta: "KPF, Beijing, China" },
+    { year: 2013, image: "images/genesis-beijing-b.jpg", title: "Genesis Beijing, Bulgari Hotel", meta: "KPF, Beijing, China" },
+    { year: 2014, span: 5, image: "images/mnp-tower-b.jpg", title: "MNP Tower", meta: "KPF, Vancouver, Canada" },
+    { year: 2014, span: 7, image: "images/mnp-tower-a.jpg", title: "MNP Tower", meta: "KPF, Vancouver, Canada" },
     { year: 2015, image: "images/400-channelside-01.jpg", title: "400 Channelside", meta: "Gensler, Tampa, FL" },
     { year: 2015, image: "images/400-channelside-02.jpg", title: "400 Channelside", meta: "Gensler, Tampa, FL" },
-    { year: 2016, image: "images/harborside-02.jpg", title: "Harborside Office Building", meta: "Gensler, Jersey City, NJ" },
-    { year: 2016, image: "images/harborside-03.jpg", title: "Harborside Office Building", meta: "Gensler, Jersey City, NJ" },
-    { year: 2019, image: "images/resorts-world-nyc-01.jpg", title: "Resorts World Casino New York City", meta: "Perkins Eastman, New York" },
-    { year: 2019, image: "images/resorts-world-nyc-03.jpg", title: "Resorts World Casino New York City", meta: "Perkins Eastman, New York" },
+    { year: 2019, span: 8, image: "images/resorts-world-nyc-01.jpg", title: "Resorts World Casino New York City", meta: "Perkins Eastman, New York" },
+    { year: 2019, span: 4, focus: "90% 60%", image: "images/resorts-world-nyc-03.jpg", title: "Resorts World Casino New York City", meta: "Perkins Eastman, New York" },
+    { year: 2020, span: 5, image: "images/bush-terminal-01.jpg", title: "MADE Campus at Bush Terminal", meta: "nARCHITECTS with Perkins Eastman, Brooklyn, NY" },
+    { year: 2020, span: 4, image: "images/bush-terminal-02.jpg", title: "MADE Campus at Bush Terminal", meta: "nARCHITECTS with Perkins Eastman, Brooklyn, NY" },
+    { year: 2020, span: 3, image: "images/bush-terminal-03.jpg", title: "MADE Campus at Bush Terminal", meta: "nARCHITECTS with Perkins Eastman, Brooklyn, NY" },
     { year: 2021, image: "images/250-fifth-avenue-hotel-02.jpg", title: "The Fifth Avenue Hotel, 250 Fifth Avenue", meta: "Perkins Eastman, New York" },
     { year: 2021, image: "images/250-fifth-avenue-hotel-04.jpg", title: "The Fifth Avenue Hotel, 250 Fifth Avenue", meta: "Perkins Eastman, New York" },
     { year: 2021, image: "images/250-fifth-avenue-hotel-03.jpg", title: "The Fifth Avenue Hotel, 250 Fifth Avenue", meta: "Perkins Eastman, New York" },
@@ -313,27 +329,29 @@
     const ROW_HEIGHT = 9;      // same height for every photo (in 40px grid units)
     // 1. group consecutive photos with the same title
     const groups = [];
-    items.forEach(p => { const g = groups[groups.length - 1]; (g && g[0].title === p.title) ? g.push(p) : groups.push([p]); });
-    // 2. build rows of 2-4 photos
+    items.forEach(p => { const g = groups[groups.length - 1]; (g && (g[0].row ?? g[0].title) === (p.row ?? p.title)) ? g.push(p) : groups.push([p]); });
+    // 2. build rows of 2-3 photos (a project with 4 or more photos gets another row: 4 = 2+2, 5 = 3+2, 6 = 3+3)
+    //    List each project's exterior photos first, so every project starts with an exterior on the left.
     const rows = [];
     for (let i = 0; i < groups.length; i++) {
       let g = groups[i];
-      while (g.length === 1 && i + 1 < groups.length && g.length + groups[i + 1].length <= 4) g = g.concat(groups[++i]);
-      if (g.length === 1 && rows.length && rows[rows.length - 1].length < 4) { rows[rows.length - 1].push(g[0]); continue; }
-      for (let s = 0; s < g.length; ) {          // more than 4 photos: split, never leaving 1 alone
-        const left = g.length - s, take = left > 4 ? (left === 5 ? 3 : 4) : left;
+      while (g.length === 1 && i + 1 < groups.length && g.length + groups[i + 1].length <= 3) g = g.concat(groups[++i]);
+      if (g.length === 1 && rows.length && rows[rows.length - 1].length < 3) { rows[rows.length - 1].push(g[0]); continue; }
+      for (let s = 0; s < g.length; ) {          // never leave 1 photo alone in a row
+        const left = g.length - s, take = left > 3 ? (left === 4 ? 2 : 3) : left;
         rows.push(g.slice(s, s + take)); s += take;
       }
     }
     // 3. widths: mix shapes from row to row; same height everywhere
-    const turn = {};
+    const turn = {}; let prev = null;
     rows.forEach(row => {
       const n = row.length, k = (turn[n] = (turn[n] || 0) + 1) - 1;
       const shape = SHAPES[n][k % SHAPES[n].length];
       row.forEach((p, x) => {
         p._c = p.span || shape[x]; p._r = ROW_HEIGHT;
         p._mc = (n % 2 === 1 && x === 0) ? 6 : 3; p._mr = 5;
-        p._more = x > 0 && row[x - 1].title === p.title;   // project name shown once per row
+        p._more = prev !== null && prev.title === p.title;   // project name shown once per project
+        prev = p;
       });
     });
   }
@@ -341,14 +359,16 @@
 
   // NYC Architecture Biennial photos (2024 awards and events).
   const BIENNIAL = [
-    { image: "images/nycab-2024-1.jpg", title: "2024 NYCAB Inclusion Award ceremony", meta: "New York Institute of Technology" },
-    { image: "images/nycab-2024-2.jpg", title: "2024 NYC Architecture Biennial", meta: "New York Institute of Technology, Manhattan, October 17, 2024" },
-    { image: "images/nycab-2024-3.jpg", title: "2024 NYC Architecture Biennial", meta: "New York Institute of Technology, Manhattan, October 17, 2024" },
-    { image: "images/nycab-2024-4.jpg", title: "2024 NYC Architecture Biennial, with speaker Farzana Gandhi", meta: "New York Institute of Technology, Manhattan, October 19, 2024" },
-    { image: "images/nycab-2024-5.jpg", title: "2024 NYC Architecture Biennial", meta: "New York Institute of Technology, Manhattan, October 19, 2024" },
-    { image: "images/nycab-7.jpg", title: "2020 NYC Architecture Biennial", meta: "" },
-    { image: "images/nycab-9.jpg", title: "2020 NYC Architecture Biennial", meta: "" },
-    // Add more NYCAB photos here, e.g. { image: "images/nycab-9.jpg", title: "Caption", meta: "Place" },
+    // "row" keeps photos together in one row; "span" = width out of 12.
+    { row: 1, span: 5, focus: "0% 50%", image: "images/nycab-2024-1.jpg", title: "2024 NYCAB Inclusion Award ceremony", meta: "New York Institute of Technology" },
+    { row: 1, span: 7, image: "images/nycab-2024-2.jpg", title: "2024 NYC Architecture Biennial", meta: "New York Institute of Technology, Manhattan, October 17, 2024" },
+    { row: 2, span: 5, image: "images/nycab-2024-3.jpg", title: "2024 NYC Architecture Biennial", meta: "New York Institute of Technology, Manhattan, October 17, 2024" },
+    { row: 2, span: 7, focus: "50% 25%", image: "images/nycab-2024-4.jpg", title: "2024 NYC Architecture Biennial, with speaker Farzana Gandhi", meta: "New York Institute of Technology, Manhattan, October 19, 2024" },
+    { row: 3, span: 5, image: "images/nycab-2024-5.jpg", title: "2024 NYC Architecture Biennial", meta: "New York Institute of Technology, Manhattan, October 19, 2024" },
+    { row: 3, span: 7, image: "images/nycab-2024-6.jpg", title: "2024 NYC Architecture Biennial", meta: "New York Institute of Technology, Manhattan" },
+    { row: 4, span: 7, image: "images/nycab-7.jpg", title: "2020 NYC Architecture Biennial", meta: "" },
+    { row: 4, span: 5, image: "images/nycab-9.jpg", title: "2020 NYC Architecture Biennial", meta: "" },
+    // Add more NYCAB photos here, e.g. { row: 5, span: 6, image: "images/nycab-10.jpg", title: "Caption", meta: "Place" },
   ];
   layoutRows(BIENNIAL);
   // ---------------------------------------
@@ -364,6 +384,7 @@
       if (p._c) { fig.style.setProperty("--c", p._c); fig.style.setProperty("--r", p._r); fig.style.setProperty("--mc", p._mc); fig.style.setProperty("--mr", p._mr); }
       const img = document.createElement("img");
       img.src = p.image; img.alt = p.title; img.loading = "lazy";
+      if (p.focus) img.style.setProperty("object-position", p.focus, "important"); // optional: which part of a cropped photo to keep
       img.addEventListener("error", () => { fig.classList.add("missing"); img.remove(); });
       const cap = document.createElement("figcaption");
       cap.textContent = p.title;
@@ -382,7 +403,6 @@
     document.getElementById("li-row").hidden = false;
     document.getElementById("li-nav").hidden = false;
   }
-
   const form = document.getElementById("request-form");
   const status = document.getElementById("request-status");
   form.addEventListener("submit", (e) => {
