@@ -319,6 +319,10 @@
     { year: 2021, image: "images/250-fifth-avenue-hotel-02.jpg", title: "The Fifth Avenue Hotel, 250 Fifth Avenue", meta: "Perkins Eastman, New York" },
     { year: 2021, image: "images/250-fifth-avenue-hotel-04.jpg", title: "The Fifth Avenue Hotel, 250 Fifth Avenue", meta: "Perkins Eastman, New York" },
     { year: 2021, image: "images/250-fifth-avenue-hotel-03.jpg", title: "The Fifth Avenue Hotel, 250 Fifth Avenue", meta: "Perkins Eastman, New York" },
+    { year: 2022, span: 8, image: "images/bergen-medical-01.jpg", title: "Bergen Medical Building", meta: "Perkins Eastman, Paramus, NJ" },
+    { year: 2022, span: 4, image: "images/bergen-medical-02.jpg", title: "Bergen Medical Building", meta: "Perkins Eastman, Paramus, NJ" },
+    { year: 2022, span: 5, image: "images/bergen-medical-03.jpg", title: "Bergen Medical Building", meta: "Perkins Eastman, Paramus, NJ" },
+    { year: 2022, span: 7, focus: "70% 50%", image: "images/bergen-medical-04.jpg", title: "Bergen Medical Building", meta: "Perkins Eastman, Paramus, NJ" },
     { year: 2024, span: 6, image: "images/statler-conference-center-foyer.jpg", title: "Statler Hotel Conference Center, Cornell University", meta: "Richard McElhiney Architects, Ithaca, NY" },
     { year: 2024, span: 6, image: "images/statler-conference-center-corridor.jpg", title: "Statler Hotel Conference Center, Cornell University", meta: "Richard McElhiney Architects, Ithaca, NY" },
     { year: 2025, span: 6, image: "images/carpenter-hall-ph3-corridor.jpg", title: "Carpenter Hall, Phase 3, Cornell University", meta: "Richard McElhiney Architects, Ithaca, NY" },
@@ -354,7 +358,7 @@
       row.forEach((p, x) => {
         p._c = p.span || shape[x]; p._r = ROW_HEIGHT;
         p._mc = (n % 2 === 1 && x === 0) ? 6 : 3; p._mr = 5;
-        p._more = prev !== null && prev.title === p.title;   // project name shown once per project
+        p._more = x > 0 && prev !== null && prev.title === p.title;   // project name shown once per row
         prev = p;
       });
     });
